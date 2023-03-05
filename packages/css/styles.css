@@ -442,8 +442,28 @@ img {
   border-radius: 0.5rem;
   justify-self: center;
   align-items: center;
-  height: 500px;
+  height: 435px;
   width: 350px;
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.about__img:hover {
+  animation: flash 1s;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .about__description {
@@ -793,7 +813,13 @@ img {
   width: 265px;
   border-radius: 0.5rem;
   justify-self: center;
+  transition: transform 0.3s ease-in-out;
 }
+
+.portfolio__img:hover {
+  transform: scale(1.1);
+}
+
 
 .portfolio__title {
   font-size: var(--h3-font-size);
