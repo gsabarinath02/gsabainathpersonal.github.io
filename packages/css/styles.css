@@ -444,8 +444,8 @@ img {
   align-items: center;
   height: 435px;
   width: 350px;
-  -webkit-transform: rotateY(-180deg);
-  transform: rotateY(-180deg);
+  /* -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg); */
 }
 
 .about__img:hover {
