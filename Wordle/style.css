@@ -96,3 +96,16 @@ body {
     top: 0.5em;
   }
 }
+
+.header {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ font-size: 40px;
+ letter-spacing: 1.7px;
+  color: #f4f0f0;
+  
+  padding-top: 20px;
+  text-align: center;
+}
