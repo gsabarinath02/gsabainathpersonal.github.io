@@ -230,7 +230,7 @@ function checkWin(board) {
 
 function gameOver(gameWon) {
 	if (gameplay == 'mp') {
-		boxPopupFunction(gameWon.player == markers[0] ? (players[0] + " wins!") : players[1] + " wins!");
+		boxPopupFunction(gameWon.player == markers[0] ? (players[0] + " wins! 🏆") : players[1] + " wins!🏆");
 		if (gameWon.index == 0) {
 			cells[0].style.backgroundColor = gameWon.player == markers[0] ? "green" : "blue";
 			cells[1].style.backgroundColor = gameWon.player == markers[0] ? "green" : "blue";
@@ -265,7 +265,7 @@ function gameOver(gameWon) {
 			cells[2].style.backgroundColor = gameWon.player == markers[0] ? "green" : "blue";
 		}
 	} else if (gameplay == 'sp') {
-		boxPopupFunction(gameWon.player == markers[0] ? "You win!" : "You lose.");
+		boxPopupFunction(gameWon.player == markers[0] ? "You win!🏆" : "You lose 😔");
 		if (gameWon.index == 0) {
 			cells[0].style.backgroundColor = gameWon.player == markers[0] ? "green" : "red";
 			cells[1].style.backgroundColor = gameWon.player == markers[0] ? "green" : "red";
@@ -313,6 +313,6 @@ function boxPopupFunction(text) {
 
 function checkTie() {
 	if (emptysq().length == 0) {
-		boxPopupFunction("Tie Game!")
+		boxPopupFunction("its a draww!🤝")
 	}
 }
