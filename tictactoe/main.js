@@ -349,7 +349,7 @@ function boxPopupFunction(text) {
 
 function checkTie() {
 	if (emptysq().length == 0) {
-		boxPopupFunction("its a draww!🤝")
+		boxPopupFunction("its a draw!🤝")
 		document.querySelector('div[id="text"]').style.backgroundColor = "yellow";
 		backgroundMusic.pause();
 		tieMusic.play();
