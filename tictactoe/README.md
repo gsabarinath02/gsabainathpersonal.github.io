@@ -10,5 +10,3 @@ Availabe at : [click here](https://gsabarinath02.github.io/gsabainathpersonal.gi
 ![1678190510186](image/README/1678190510186.png)
 
     ©️ gsabarinath02
-
-opem
