@@ -5,11 +5,14 @@ let markers = ["X", "O"];
 let turn = 0;
 let editor = document.getElementById("editor");
 let gameplay = null;
+
 const clickSound = document.getElementById("click-sound");
 const winnerMusic = document.getElementById("winner-music");
 const loserMusic = document.getElementById("loser-music");
 const tieMusic = document.getElementById("tie-music");
 
+const undoButton = document.querySelector("#undo-button");
+	
 // Get the audio element
 const backgroundMusic = document.getElementById("background-music");
 
