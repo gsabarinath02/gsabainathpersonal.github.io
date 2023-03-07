@@ -5,6 +5,28 @@ let markers = ["X", "O"];
 let turn = 0;
 let editor = document.getElementById("editor");
 let gameplay = null;
+const clickSound = document.getElementById("click-sound");
+const winnerMusic = document.getElementById("winner-music");
+const loserMusic = document.getElementById("loser-music");
+const tieMusic = document.getElementById("tie-music");
+
+// Get the audio element
+const backgroundMusic = document.getElementById("background-music");
+
+// Play the background music when the page loads
+window.addEventListener("load", () => {
+  backgroundMusic.play();
+});
+
+
+cells.forEach(cell => {
+	cell.addEventListener("click", () => {
+	  // Play the click sound
+	  clickSound.play();
+	  
+	  // Add your tic tac toe game logic here
+	});
+  });
 
 function mode(clickedMode) {
 	gameplay = clickedMode;
@@ -78,6 +100,7 @@ function play(clickedDiv) {
 
 function reset() {
 	location.reload();
+	backgroundMusic.play();
 }
 
 function emptysq() {
@@ -309,10 +332,24 @@ function boxPopupFunction(text) {
 	let x = document.getElementById("text");
 	x.style.display = "block";
 	x.innerText = "\n" + text;
+	if (text == "You win!🏆" || text.includes("🏆") ) {
+		x.style.backgroundColor = "palegreen";
+		backgroundMusic.pause();
+		winnerMusic.play();
+
+	} else if (text == "You lose 😔") {
+		x.style.backgroundColor = "lightred";
+		backgroundMusic.pause();
+		loserMusic.play();
+	}
 }
 
 function checkTie() {
 	if (emptysq().length == 0) {
 		boxPopupFunction("its a draww!🤝")
+		document.querySelector('div[id="text"]').style.backgroundColor = "yellow";
+		backgroundMusic.pause();
+		tieMusic.play();
+
 	}
 }

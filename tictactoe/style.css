@@ -7,13 +7,34 @@
 body h1 {
 	text-align: center;
 }
+
+
 html {
-	background: url(background.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
+	position: relative;
+	min-height: 100%;
+
+	/* Set the background image */
+	background-image: url(sunset.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
 	background-size: cover;
 }
+
+html::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url(background.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	filter: blur(100px); /* Apply the blur effect to the pseudo-element */
+	z-index: -1; /* Send the pseudo-element behind the main content */
+}
+
 div.game-board {
 	border-radius: 3mm;
 	border: 3px solid blue;
@@ -55,7 +76,11 @@ div[id="text"] {
 	left: 45%;
 	top: 45%;
 	margin-left: -100px;
-	background-color: sandybrown;
+	background-color: rgb(244, 86, 86);
+}
+
+.win div[id="text"] {
+	background-color: green;
 }
 section {
 	font-size: 40px;
@@ -88,7 +113,8 @@ div[id="namer"] {
 	border: 2px solid;
 	width: 400px;
 	height: 210px;
-	background-color: #980398;
+	/* background-color: #980398; */
+	background-color: rgb(117, 117, 65);
 	border-radius: 5mm;
 	position: absolute;
 	left: 37%;
@@ -142,7 +168,7 @@ button[id="htp"] {
 		transform: scale(1.1);
 	}
 	50% {
-		border: 2px solid red;
+		border: 2px solid rgb(241, 69, 69);
 		transform: scale(0.9);
 	}
 	75% {
@@ -172,7 +198,7 @@ button[id="game-reset"] {
 	font-weight: bold;
 	font-size: 0.5cm;
 	text-align: center;
-	color: goldenrod;
+	color: black;
 	border-radius: 5mm;
 }
 input[id="Submit"] {
@@ -207,3 +233,25 @@ button[id="fir"] {
 	font-family: 'Rock Salt', cursive;
 	border-radius: 7mm;
 }
+
+.green-box {
+	background-color: green;
+  }
+
+  @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;700;900&display=swap");
+
+  
+  .title-wrapper {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	transform: skew(0, -10deg);
+  }
+
+  #game-reset:hover{
+	background-color: #d168d1;
+	transform: scale(1.3);
+
+  }
+
+

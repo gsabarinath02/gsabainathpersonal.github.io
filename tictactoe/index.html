@@ -11,11 +11,12 @@
 <body>
 	<div>
 		<br>
-		<h1 class="middle">
-                Welcome <br>
-               To<br>
-				Tic Tac Toe Game!
+		<h1 class="Welcome">
+			<!-- <span data-text="Sweet">Welcome to</span> -->
+			<span data-text="Stuff">Tic Tac Toe Game!</span>
             </h1>	
+
+
 	</div>
 	<br>
 	<br>
@@ -43,10 +44,10 @@
 		<br>
 		<br>
 		<form id="frm1">Player 1 Name:
-			<input type="text" id="p1name" placeholder="Player 1">
+			<input type="text" id="p1name" placeholder="Player 1" required>
 			<br>
 			<br>Player 2 Name:
-			<input type="text" id="p2name" placeholder="Player 2">
+			<input type="text" id="p2name" placeholder="Player 2" required>
 			<br>
 			<br>
 			<input type="button" id="Submit" onclick="naming()" value="Submit">
@@ -87,7 +88,29 @@
 	<a href="https://www.wikihow.com/Play-Tic-Tac-Toe" id="howto">
 		<!-- <button id="htp">How to Play</button> -->
 	</a>
-	<script src="main.js"></script>
+	
+
+	<audio id="click-sound">
+		<source src="click2.wav" type="audio/wav">
+	  </audio>
+
+	  <audio id="background-music" loop>
+		<source src="background-music.mp3" type="audio/mpeg">
+	  </audio>
+
+	  <audio id="winner-music">
+		<source src="winner.wav" type="audio/mpeg">
+	  </audio>
+	  
+	  <audio id="loser-music">
+		<source src="lost.wav" type="audio/mpeg">
+	  </audio>
+
+	  <audio id="tie-music">
+		<source src="tie.mp3" type="audio/mpeg">
+	  </audio>
+
+	  <script src="main.js"></script>
 </body>
 
 </html>
