@@ -5938,3 +5938,57 @@ const validateWord = async () => {
 };
 
 window.onload = startGame();
+
+// function startTimer(duration, display) {
+//   var timer = duration, minutes, seconds;
+//   setInterval(function () {
+//       minutes = parseInt(timer / 60, 10);
+//       seconds = parseInt(timer % 60, 10);
+
+//       minutes = minutes < 10 ? "0" + minutes : minutes;
+//       seconds = seconds < 10 ? "0" + seconds : seconds;
+
+//       display.textContent = minutes + ":" + seconds;
+
+//       if (--timer < 0) {
+//           timer = duration;
+//       }
+//   }, 1000);
+// }
+
+// window.onload = function () {
+//   var fiveMinutes = 60 * 5,
+//       display = document.querySelector('.count');
+//   startTimer(fiveMinutes, display);
+// };
+
+
+const countdown = (duration, display) => {
+  let timer = duration, minutes, seconds;
+  setInterval(() => {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    display.textContent = minutes + ":" + seconds;
+
+    const circle = document.querySelector('.circle');
+    const circumference = 502.4;
+    const percent = timer / duration;
+    const dashoffset = circumference * (1 - percent);
+    circle.style.strokeDasharray = `${circumference}, ${circumference}`;
+    circle.style.strokeDashoffset = dashoffset;
+
+    if (--timer < 0) {
+      timer = duration;
+    }
+  }, 1000);
+};
+
+window.onload = () => {
+  const duration = 60 * 3; // in seconds
+  const display = document.querySelector('.countdown-text');
+  countdown(duration, display);
+};

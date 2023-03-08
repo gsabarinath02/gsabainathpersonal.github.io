@@ -109,3 +109,69 @@ body {
   padding-top: 20px;
   text-align: center;
 }
+
+/* .timer{
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-bottom: 0.5em; */
+  /* margin-bottom: 10rem; */
+  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 40px;
+  letter-spacing: 1.7px;
+  color: #f4f0f0;
+  padding: 150px 110px 100px 60px;
+  text-align: right;
+} */
+
+
+/* .scrore{
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+  /* margin-bottom: 10rem; */
+  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 40px;
+  letter-spacing: 1.7px;
+  color: #f4f0f0;
+  padding: 150px 80px 100px 40px;
+  text-align: left;}  */
+
+  .countdown-timer {
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    left: 20;
+    padding-left: 30px;
+    padding-bottom: 20px;
+  }
+  
+  svg {
+    width: 200px;
+    height: 200px;
+    
+  }
+  
+  .circle-bg {
+    fill: none;
+    stroke: #ddd;
+    stroke-width: 10;
+  }
+  
+  .circle {
+    fill: none;
+    stroke: #ff7f50;
+    stroke-width: 10;
+    stroke-dasharray: 0, 502.4;
+    stroke-dashoffset: 0;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    transition: stroke-dasharray 1s ease-out;
+  }
+  
+  .countdown-text {
+    font-size: 40px;
+    fill: #333;
+    dominant-baseline: middle;
+    text-anchor: middle;
+  }
+  
