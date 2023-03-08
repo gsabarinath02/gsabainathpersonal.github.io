@@ -174,4 +174,54 @@ body {
     dominant-baseline: middle;
     text-anchor: middle;
   }
+
+  #cluePopup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #c5e689;
+    border: 2px solid #000;
+    padding: 10px;
+    display: none;
+  }
   
+  button.clue
+   {
+    background-color: yellow;
+    color: rgb(124, 156, 18);
+    border: none;
+    padding: 5px;
+    font-size: 31px;
+    height:60px;
+    width: 60px;
+    box-shadow: 0 2px 4px darkslategray;
+    /* right: 0; */
+
+    bottom: 0;
+    left: 0;
+  }
+
+
+button.clue
+ {
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+
+button.clue
+:hover {
+  background-color: #65b9e6;
+ }
+ 
+ button.clue
+ :active {
+  box-shadow: 0 0 2px darkslategray;
+  transform: translateY(2px);
+ }
+
+ .close {
+ background-color: #da7e7e;
+ }

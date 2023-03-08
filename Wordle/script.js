@@ -5988,7 +5988,30 @@ const countdown = (duration, display) => {
 };
 
 window.onload = () => {
-  const duration = 60 * 3; // in seconds
+  const duration = 60 * 5; // in seconds
   const display = document.querySelector('.countdown-text');
   countdown(duration, display);
 };
+
+
+function showClue() {
+  // Get a random clue
+  const clues = ["clue 1", "clue 2"];
+  const randomIndex = Math.floor(Math.random() * clues.length);
+  const randomClue = clues[randomIndex];
+
+  // Set the text of the clue popup
+  const clueText = document.getElementById("clueText");
+  clueText.innerText = randomClue;
+
+  // Show the clue popup
+  const cluePopup = document.getElementById("cluePopup");
+  cluePopup.style.display = "block";
+}
+
+function hideClue() {
+  // Hide the clue popup
+  const cluePopup = document.getElementById("cluePopup");
+  cluePopup.style.display = "none";
+}
+
