@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Photo Album</title>
+  <script src="script.js"></script>
+  <style>
+    * {
+      margin: 200;
+      padding: 100;
+      box-sizing: border-box;
+
+    }
+
+    body {
+      /* background-image: url('https://source.unsplash.com/random/400x400?16'); */
+      background-color: rgb(86, 172, 201);
+      background-size: cover;
+    }
+
+    .album {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 100px;
+    }
+
+    .album h1 {
+      color: white;
+      text-align: center;
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 20px;
+    }
+
+
+    .photo {
+      position: relative;
+      display: block;
+      height: 0;
+      padding-left: 75%;
+      padding-bottom: 75%;
+      background-size: cover;
+      background-position: top;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="album">
+    <H1>Photo Album</H1>
+    <div class="photo-grid">
+      <div class="photo"
+        style="background-image: url('https://source.unsplash.com/random/400x400?1')">
+      </div>
+      <div class="photo"
+        style="background-image: url('https://source.unsplash.com/random/400x400?2')">
+      </div>
+      <div class="photo"
+        style="background-image: url('https://source.unsplash.com/random/400x400?3')">
+      </div>
+      <div class="photo" style="background-image: url('https://source.unsplash.com/random/400x400?4')">
+      </div>
+      <div class="photo"
+        style="background-image: url('https://source.unsplash.com/random/400x400?5')">
+      </div>
+      <div class="photo"
+        style="background-image: url('https://source.unsplash.com/random/400x400?6')">
+      </div>
+      <div class="photo"
+        style="background-image: url('https://source.unsplash.com/random/400x400?7')">
+      </div>
+      <div class="photo"
+        style="background-image: url('https://source.unsplash.com/random/400x400?8')">
+      </div>
+      <div class="photo"
+        style="background-image: url('https://source.unsplash.com/random/400x400?9')">
+      </div>
+      <div class="photo"
+        style="background-image: url('https://source.unsplash.com/random/400x400?10')">
+      </div>
+      <div class="photo"
+        style="background-image: url('https://source.unsplash.com/random/400x400?11')">
+      </div>
+      <div class="photo"
+        style="background-image: url('https://source.unsplash.com/random/400x400?12')">
+      </div>
+      <div class="photo"
+        style="background-image: url('https://source.unsplash.com/random/400x400?13')">
+      </div>
+      <div class="photo"
+        style="background-image: url('https://source.unsplash.com/random/400x400?14')">
+      </div>
+      <div class="photo"
+        style="background-image: url('https://source.unsplash.com/random/400x400?15')">
+      </div>
+    </div>
+  </div>
+  
+</body>
+
+</html>

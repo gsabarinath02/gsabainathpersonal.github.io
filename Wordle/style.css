@@ -180,10 +180,11 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #c5e689;
+    background-color: none;
     border: 2px solid #000;
     padding: 10px;
     display: none;
+    border: none;
   }
   
   button.clue
@@ -223,5 +224,18 @@ button.clue
  }
 
  .close {
- background-color: #da7e7e;
+ background-color: none;
+ position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  border: none;
  }
+
+.girl{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
