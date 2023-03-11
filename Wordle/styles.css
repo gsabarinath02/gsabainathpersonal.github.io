@@ -322,6 +322,7 @@ svg {
   border-radius: 12px;
   width: 100px;
   align-self: center;
+  margin-top: 20px ;
 }
 
 .newGame:hover{

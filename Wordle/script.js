@@ -15458,9 +15458,10 @@ function shakeTiles(tiles) {
 
 function checkWinLose(guess, tiles) {
   if (guess === targetWord) {
-    showAlert("You Win", 5000)
+    showAlert("You Win 🏆", 5000)
     danceTiles(tiles)
     stopInteraction()
+    clearInterval(intervalRef);
     return
   }
 
@@ -15486,9 +15487,11 @@ function danceTiles(tiles) {
   })
 }
 
+let intervalRef;
+
 const countdown = (duration, display) => {
   let timer = duration, minutes, seconds;
-  setInterval(() => {
+  intervalRef = setInterval(() => {
     minutes = parseInt(timer / 60, 10);
     seconds = parseInt(timer % 60, 10);
 
@@ -15507,10 +15510,14 @@ const countdown = (duration, display) => {
     if (--timer < 0) {
       timer = duration;
       stopInteraction();
-      showAlert("Time's Up!!!\n The word is".concat(" ", targetWord))
+      showAlert("Time's Up!!!\n The word is".concat(" ", targetWord));
+      clearInterval(intervalRef);
     }
   }, 1000);
 };
+
+
+
 
 // window.onload = () => {
 
