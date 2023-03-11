@@ -353,3 +353,33 @@ svg {
   text-align: center;
   padding-top: 20px;
 }
+
+#clue-button {
+  background-color: hsl(240, 3%, 7%); /* Green background */
+  border: none; /* Remove button border */
+  color: white; /* White text */
+  padding: 15px 32px; /* Large padding */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Display as inline-block */
+  font-size: 16px; /* Set font size */
+  margin: 4px 2px; /* Add some margin */
+  cursor: pointer; /* Add cursor on hover */
+  border-radius: 8px; /* Rounded corners */
+  width: 100px;
+  align-self: center;
+}
+
+#clue-button:hover {
+  background-color: yellow; 
+  border-radius: 50%;
+}
+
+#word{
+  font-size: 30px;
+  font-weight: bold;
+  color: #777b95;
+  text-align: center;
+  font-family: fantasy;
+  letter-spacing: 0.7rem;
+}
