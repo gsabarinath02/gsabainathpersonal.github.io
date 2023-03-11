@@ -328,3 +328,18 @@ svg {
   background-color: lightgreen;
   color: black;
 }
+
+.img{
+  position: absolute;
+  bottom: 190px;
+  right: 100px;
+  animation-name: example ;
+  animation-duration: 20s;  
+  animation-delay: 2s;
+  animation-fill-mode: backwards ;
+}
+
+@keyframes example {
+  from {top: 0px; background-color: none;}
+  to {top: 200px;}
+}
