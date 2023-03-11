@@ -1,31 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wordle</title>
-    <!-- Google Font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
-      rel="stylesheet"
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Wordle - A daily word game" />
+  <meta property="og:url" content="https://calatop.github.io/Wordle/" />
+  <meta
+      property="description"
+      content="Guess the hidden word in 6 tries. A new puzzle is available each day."
     />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
- 
-  </head>
-
-
-  <body>
-    <h1 class="header">Wordle Game</h1>
-    <div class="wrapper">
-      <div class="container"></div>
-      <div class="rules">
-        <img src="rules.svg" />
-      </div>
-      <div class="win-screen hide"></div>
-    </div>
-    <button class="submit hide">Submit</button>
+  <link rel="stylesheet" href="styles.css">
+  <link href="icon.png" rel="icon shortcut" />
+  <script src="script.js" defer></script>
+  <title>Wordle</title>
+</head>
+<body>
+  <div class="alert-container" data-alert-container></div>
+  <p class = heading>Wordle game</p>
+  <div data-guess-grid class="guess-grid">
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+  </div>
+  <div data-keyboard class="keyboard">
+    <button class="key" data-key="Q">Q</button>
+    <button class="key" data-key="W">W</button>
+    <button class="key" data-key="E">E</button>
+    <button class="key" data-key="R">R</button>
+    <button class="key" data-key="T">T</button>
+    <button class="key" data-key="Y">Y</button>
+    <button class="key" data-key="U">U</button>
+    <button class="key" data-key="I">I</button>
+    <button class="key" data-key="O">O</button>
+    <button class="key" data-key="P">P</button>
+    <div class="space"></div>
+    <button class="key" data-key="A">A</button>
+    <button class="key" data-key="S">S</button>
+    <button class="key" data-key="D">D</button>
+    <button class="key" data-key="F">F</button>
+    <button class="key" data-key="G">G</button>
+    <button class="key" data-key="H">H</button>
+    <button class="key" data-key="J">J</button>
+    <button class="key" data-key="K">K</button>
+    <button class="key" data-key="L">L</button>
+    <div class="space"></div>
+    <button data-enter class="key large">Enter</button>
+    <button class="key" data-key="Z">Z</button>
+    <button class="key" data-key="X">X</button>
+    <button class="key" data-key="C">C</button>
+    <button class="key" data-key="V">V</button>
+    <button class="key" data-key="B">B</button>
+    <button class="key" data-key="N">N</button>
+    <button class="key" data-key="M">M</button>
+    <button data-delete class="key large">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+        <path fill="var(--color-tone-1)" d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"></path>
+      </svg>
+    </button>
+  </div>
 
   <div class="countdown-timer">
     <svg>
@@ -35,20 +95,17 @@
     </svg>
   </div>
 
-  <!-- <div class="clue">
-    <p>💡</p>
-    </div> -->
+  <p>Win Probability: <span id="win-probability"></span></p>
 
-    <button class="clue" onclick="showClue()">💡</button>
-<div id="cluePopup">
-  <!-- <p>Here's your clue: </p> -->
-  <img class= "girl" src="clue_girl.png" alt="" height="100" width="100">
-  <p id="clueText"></p>
-  <button class="close" onclick="hideClue()">Close</button>
-</div>
 
-  
-    <!-- Script -->
-    <script src="script.js"></script>
-  </body>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="rules.svg" alt="Rules" />
+    </div>
+  </div>
+
+  <button class="newGame" onclick="reloadPage()">New Game</button>
+
+</body>
 </html>
