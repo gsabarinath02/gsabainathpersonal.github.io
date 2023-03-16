@@ -1,0 +1,30 @@
+body{
+    margin: auto;
+}
+
+.header{
+    background-color: rgb(87, 223, 87);
+    color: #ffffff;
+    text-align: center;
+    padding: 1px
+}
+
+h1{
+    text-align: center;
+    color: #ffffff;
+}
+
+.navbar{
+    background-color: rgb(60, 57, 57);
+    color: #ffffff;
+    padding: 10px
+    /* word-spacing: 10px; */
+}
+
+.hello{
+    word-spacing: 20px;
+}
+
+.link4{
+    text-align: left;
+}
