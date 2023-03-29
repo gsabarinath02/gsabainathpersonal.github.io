@@ -28,3 +28,28 @@ h1{
 .link4{
     text-align: left;
 }
+
+.container {
+    width: 90vw;
+    height: 300px;
+    /* margin: 30px auto; */
+    background: #eee;
+   
+    display: flex;
+  }
+  
+  .item {
+    margin: 10px 0 0 10px;
+    padding: 30px;
+    background: rgb(170,170,170);
+    color: white;
+  }
+  
+  .item--4 {
+    flex-grow: 1;
+    background: rgb(170,170,170);
+  }
+
+  .item--1{
+
+  }
